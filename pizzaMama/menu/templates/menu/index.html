@@ -1,19 +1,25 @@
+{% load static %}
+
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'menu/style.css'%}">
     <title>Nos pizzas</title>
 </head>
 
 <body>
-    <h1> Les pizzas</h1>
-    <ul>
+    <img src="{% static 'menu/images/small_logo.png'%}" alt="Our logo" id=OurLogo>
+    <div class="menuTitle">
+        <h1> Les pizzas</h1>
+    </div>
+    <div class="menu_list">
         {% for pizza in my_pizzas_key %}
-        <li> {{ pizza.name }} : {{pizza.price }} € </li>
+        <div> {{ pizza.name }} </div>
         {% endfor %}
-    </ul>
+    </div>
 </body>
 
 </html>
