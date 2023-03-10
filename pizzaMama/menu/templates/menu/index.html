@@ -17,7 +17,14 @@
     </div>
     <div class="menu_list">
         {% for pizza in my_pizzas_key %}
-        <div> {{ pizza.name }} </div>
+        <div class="menu_list_item">
+            <span class="pizza_name">{{ pizza.name }} </span>
+            <span class="pizza_price">{{ pizza.price | floatformat:2}} €</span>
+            <span class="pizza_ingredients">{{ pizza.ingredients }}</span>
+            {%if pizza.vegan%}
+            <span class="pizza_vegan"> vegan</span>
+            {%endif%}
+        </div>
         {% endfor %}
     </div>
 </body>
