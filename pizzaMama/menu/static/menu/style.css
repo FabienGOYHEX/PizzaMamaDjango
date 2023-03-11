@@ -38,6 +38,8 @@ h1 {
 .pizza_name {
     font-size: 20px;
     font-weight: 600;
+    width: 470px;
+
 }
 
 .pizza_price {
@@ -51,6 +53,7 @@ h1 {
     font-size: 14px;
     margin-top: 4px;
     display: block;
+    width: 120px;
 }
 
 .pizza_vegan {
