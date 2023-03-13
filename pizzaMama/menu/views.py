@@ -6,7 +6,7 @@ from .models import Pizza
 
 
 def index(request):
-    pizzas = Pizza.objects.all()
+    pizzas = Pizza.objects.all().order_by('price')
     return render(request, 'menu/index.html', {'my_pizzas_key': pizzas})
     '''pizzas = Pizza.objects.all()
     pizzas_names_and_price = [pizza.name + " : " +
